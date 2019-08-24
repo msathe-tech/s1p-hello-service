@@ -1,6 +1,7 @@
 # Overview
 This app shows how to deploy spring boot app on K8s and how to make service discovery within a cluster.
-Note how the hello-client app refers to URL of hello-service
+Note how the hello-client app refers to URL of hello-service.
+This app will be used in CI/CD pipeline.
 
 # Create hello
 Make sure your kubectl is set for correct context.
