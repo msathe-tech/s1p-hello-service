@@ -12,11 +12,13 @@ public class HelloServiceController {
 
 	@GetMapping("/{name}")
 	public String sayHello(@PathVariable String name) {
+		System.out.println("v2.sayHello");
 		return "Hello " + name + "! this is hello-service v2";
 	}
 
 	@GetMapping("/")
 	public String sayHi() {
+		System.out.println("v2.sayHi");
 		return "Hi!!! ";
 	}
 }
