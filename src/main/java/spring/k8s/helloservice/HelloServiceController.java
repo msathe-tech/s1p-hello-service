@@ -12,7 +12,7 @@ public class HelloServiceController {
 
 	@GetMapping("/{name}")
 	public String sayHello(@PathVariable String name) {
-		return "Hello " + name;
+		return "Hello " + name + "! this is hello-service v2";
 	}
 
 	@GetMapping("/")
