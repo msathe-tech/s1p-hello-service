@@ -12,13 +12,25 @@ public class HelloServiceController {
 
 	@GetMapping("/{name}")
 	public String sayHello(@PathVariable String name) {
-		System.out.println("v2.sayHello");
-		return "Hello " + name + "! this is hello-service v2";
+		StringBuffer message = new StringBuffer("Hello ").append(name).append("!");
+		message.append(System.getProperty("line.separator"));
+		message.append("n = ").append(System.getenv("metadata.name"));
+		message.append(", ");
+		message.append("p = ").append(System.getenv("metadata.namespace"));
+
+		System.out.println(message.toString());
+		return message.toString();
 	}
 
 	@GetMapping("/")
 	public String sayHi() {
-		System.out.println("v2.sayHi");
-		return "Hi!!! ";
+		StringBuffer message = new StringBuffer("Hi!");
+		message.append(System.getProperty("line.separator"));
+		message.append("n = ").append(System.getenv("metadata.name"));
+		message.append(", ");
+		message.append("p = ").append(System.getenv("metadata.namespace"));
+
+		System.out.println(message.toString());
+		return message.toString();
 	}
 }
