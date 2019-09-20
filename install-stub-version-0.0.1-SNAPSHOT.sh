@@ -1,0 +1,1 @@
+./mvnw install:install-file -DgroupId=spring.k8s -DartifactId=s1p-hello-service -Dversion=0.0.1-SNAPSHOT -Dfile=../s1p-hello-service/target/s1p-hello-service-0.0.1-SNAPSHOT-stubs.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true -Dclassifier=stubs
