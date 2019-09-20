@@ -25,4 +25,9 @@ git commit -m "stubs for version $VERSION"
 git push
 ```
 
+###
+Idea borrowed from:
+https://gist.github.com/fernandezpablo85/03cf8b0cd2e7d8527063
 
+Also useful:
+https://dzone.com/articles/using-github-as-maven-repository
