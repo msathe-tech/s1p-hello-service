@@ -25,11 +25,6 @@ public class HelloServiceController {
 	@GetMapping("/")
 	public String sayHi() {
 		StringBuffer message = new StringBuffer("Hi!");
-		message.append(System.getProperty("line.separator"));
-		message.append("n = ").append(System.getenv("metadata.name"));
-		message.append(", ");
-		message.append("p = ").append(System.getenv("metadata.namespace"));
-
 		System.out.println(message.toString());
 		return message.toString();
 	}
