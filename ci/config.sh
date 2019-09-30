@@ -8,7 +8,7 @@ stubProviderProdUrl=
 # Get info for compatibility testing
 if [[ ! -z "${prodUrl}" ]]; then
   echo -e "\nGetting version from ${prodUrl}"
-  prodVersion=20190928.135943Z
+  prodVersion=0.0.1-SNAPSHOT-20190928.135943Z.bd26e35
   echo "Getting git-sha from ${prodUrl}"
   prodSha=bd26e35
 fi
