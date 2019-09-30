@@ -8,14 +8,16 @@ stubProviderProdUrl=
 # Get info for compatibility testing
 if [[ ! -z "${prodUrl}" ]]; then
   echo -e "\nGetting version from ${prodUrl}"
+  #prodVersion="$(curl ${prodUrl} | jq '.app["version"]')"
   prodVersion=0.0.1-SNAPSHOT-20190928.135943Z.bd26e35
   echo "Getting git-sha from ${prodUrl}"
+  prodSha="$(curl ${prodUrl} | jq '.app["git-sha"]')"
   prodSha=bd26e35
 fi
 
 if [[ ! -z "${stubProviderProdUrl}" ]]; then
   echo -e "\n\nGetting stub-coordinates from ${stubProviderProdUrl}"
-  stubProviderProdCoordinates=`curl ${stubProviderProdUrl} | jq '.app["stub-coordinates"]'`
+  stubProviderProdCoordinates="$(curl ${stubProviderProdUrl} | jq '.app["stub-coordinates"]')"
 fi
 
 # Comment out variables to disable tests
