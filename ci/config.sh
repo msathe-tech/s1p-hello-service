@@ -17,8 +17,8 @@ fi
 
 # Comment out variables to disable tests
 export PROD_VERSION_FOR_API_PRODUCER_TEST="${prodVersion}"
-export PROD_SHA_FOR_DB_TEST="${prodSha}"
-export STUB_FOR_API_CONSUMER_TEST="${stubProviderProdCoordinates}"
+#export PROD_SHA_FOR_DB_TEST="${prodSha}"
+#export STUB_FOR_API_CONSUMER_TEST="${stubProviderProdCoordinates}"
 
 # Provide baseline info for canary deployment
 BASELINE_VERSION_FOR_CANARY_DEPLOY="${prodVersion}"
