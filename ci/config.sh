@@ -1,6 +1,3 @@
-# HARD-CODE TO TEST:
-# 0.0.1-SNAPSHOT-20190928.135943Z.bd26e35
-
 ########## Configure CI pipeline options #####
 prodUrl="http://hello-service.spin.beirut.cf-app.com/actuator/info"
 stubProviderProdUrl=
@@ -8,11 +5,9 @@ stubProviderProdUrl=
 # Get info for compatibility testing
 if [[ ! -z "${prodUrl}" ]]; then
   echo -e "\nGetting version from ${prodUrl}"
-  #prodVersion="$(curl ${prodUrl} | jq '.app["version"]')"
-  prodVersion=0.0.1-SNAPSHOT-20190928.135943Z.bd26e35
+  prodVersion="$(curl ${prodUrl} | jq '.app["version"]' | sed 's/\"//g')"
   echo "Getting git-sha from ${prodUrl}"
-  prodSha="$(curl ${prodUrl} | jq '.app["git-sha"]')"
-  prodSha=bd26e35
+  prodSha="$(curl ${prodUrl} | jq '.app["git-sha"]' | sed 's/\"//g')"
 fi
 
 if [[ ! -z "${stubProviderProdUrl}" ]]; then
